@@ -1,0 +1,16 @@
+<ng-container *ngIf="error">
+  <h4>Error interno del servidor - ¡Recargando la página hará que el error desaparezca!</h4>
+  <h5 class="text-danger">Error: {{ error.message }}</h5>
+  <p class="font-weight-bold">Nota: Si tu estás viendo esto entonces es probable que Angular no sea la falla</p>
+  <p>¿Qué hacer?</p>
+  <ol>
+    <li>Abrir las herramientas de desarrollo del navegador</li>
+    <li>Inpeccionar la pestaña de red</li>
+    <li>Revisar la petición que falló</li>
+    <li>Examinar la url solicitada - asegurate de que sea correcta</li>
+    <li>Reproducir el error en Postman - si vemos la misma respuesta, el problema no es con Angular</li>
+  </ol>
+
+  <p>Sique esta pila - ¡aquí es donde tu investigación iniciará!</p>
+  <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
